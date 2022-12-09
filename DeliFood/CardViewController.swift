@@ -31,6 +31,7 @@ class CardViewController: UIViewController, UITableViewDataSource {
                 let description = data.value(forKey: "descripcion") as! String
                 let imagen = data.value(forKey: "image_product") as! String
                 let price = data.value(forKey: "price") as! Int
+                PriceT += price
                 let product = ProductCar(idProduct: id, nameProduct: name, count: count, descripcion: description, imagenProduct: imagen, priceProduct: price)
                 productsCar.append(product)
             }
@@ -38,7 +39,7 @@ class CardViewController: UIViewController, UITableViewDataSource {
             print("Failed")
         }
         prodCardTable.dataSource = self
-        print("view Card ___>",productsCar[0])
+        totalPrice.text = String(PriceT)
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -54,8 +55,6 @@ class CardViewController: UIViewController, UITableViewDataSource {
         if let cell = prodCardTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProducTableViewCell {
             let product = productsCar[indexPath.row]
             cell.addDataCell(product)
-            PriceT += product.priceProduct
-            totalPrice.text = String(PriceT)
             return cell
         }else {
             return UITableViewCell()

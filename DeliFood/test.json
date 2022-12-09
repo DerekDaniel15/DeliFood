@@ -1,0 +1,49 @@
+{
+    "product":[
+        {
+              "idProduct": 1,
+              "nameProduct": "Pastel",
+              "stock": 2,
+              "categoryProduct":"Postre",
+              "descripcion":"Patel cubierto con chantilli",
+              "imagenProduct":"https://t2.rg.ltmcdn.com/es/posts/2/4/9/pastel_de_fresa_23942_orig.jpg",
+              "priceProduct": 50
+        },
+        {
+              "idProduct": 2,
+              "nameProduct": "Chicha Morada",
+              "stock": 15,
+              "categoryProduct":"Bebida",
+              "descripcion":"Chicha morada cosechada en Ica, el maiz morado mejor cuidado.",
+              "imagenProduct":"https://www.peru.travel/Contenido/General/Imagen/pe/650/1.1/chicha-morada-limon.jpg",
+              "priceProduct": 10
+        },
+        {
+              "idProduct": 3,
+              "nameProduct": "Arroz chaufa",
+              "stock": 26,
+              "categoryProduct":"Platos",
+              "descripcion":"El arroz chaufa, o chaufa, es un tipo de arroz frito consumido en Perú. Forma parte del estilo gastronómico chino-peruano, denominado como cocina chifa",
+              "imagenProduct":"https://www.peru.travel/Contenido/General/Imagen/pe/538/1.1/arroz-chaufa.jpg",
+              "priceProduct": 20
+        },
+        {
+              "idProduct": 4,
+              "nameProduct": "Pastel ",
+              "stock": 2,
+              "categoryProduct":"Postre",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"sjdhaksdjhakshdkajhs",
+              "priceProduct": 120
+        },
+        {
+              "idProduct": 5,
+              "nameProduct": "Pastel ",
+              "stock": 2,
+              "categoryProduct":"Postre",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"sjdhaksdjhakshdkajhs",
+              "priceProduct": 120
+        }
+    ]
+}

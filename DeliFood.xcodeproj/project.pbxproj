@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6215584C2943B1DA005C562F /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6215584B2943B1DA005C562F /* Productos.swift */; };
 		6226C851293124F1007FF313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6226C850293124F1007FF313 /* AppDelegate.swift */; };
 		6226C853293124F1007FF313 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6226C852293124F1007FF313 /* SceneDelegate.swift */; };
 		6226C855293124F1007FF313 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6226C854293124F1007FF313 /* HomeViewController.swift */; };
@@ -18,11 +19,14 @@
 		624856FB293E552A00BCDA98 /* Delifood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 624856F9293E552A00BCDA98 /* Delifood.xcdatamodeld */; };
 		624856FD293E6C2100BCDA98 /* ProductCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624856FC293E6C2100BCDA98 /* ProductCar.swift */; };
 		624856FF293E82A400BCDA98 /* ProducTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624856FE293E82A400BCDA98 /* ProducTableViewCell.swift */; };
-		62C8B824293DAB1D00C18E41 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8B823293DAB1D00C18E41 /* Productos.swift */; };
+		6268CBB12942925C0035F741 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 6268CBB02942925C0035F741 /* test.json */; };
+		6268CBB3294295B90035F741 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6268CBB2294295B90035F741 /* Service.swift */; };
+		62C8B824293DAB1D00C18E41 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8B823293DAB1D00C18E41 /* Producto.swift */; };
 		62D5C36129383A14007A5653 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D5C36029383A14007A5653 /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6215584B2943B1DA005C562F /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
 		6226C84D293124F1007FF313 /* DeliFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6226C850293124F1007FF313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6226C852293124F1007FF313 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +40,9 @@
 		624856FA293E552A00BCDA98 /* Delifood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delifood.xcdatamodel; sourceTree = "<group>"; };
 		624856FC293E6C2100BCDA98 /* ProductCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCar.swift; sourceTree = "<group>"; };
 		624856FE293E82A400BCDA98 /* ProducTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducTableViewCell.swift; sourceTree = "<group>"; };
-		62C8B823293DAB1D00C18E41 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
+		6268CBB02942925C0035F741 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		6268CBB2294295B90035F741 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		62C8B823293DAB1D00C18E41 /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		62D5C36029383A14007A5653 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6215584D2943C5A3005C562F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6226C854293124F1007FF313 /* HomeViewController.swift */,
+				624856FE293E82A400BCDA98 /* ProducTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		6226C844293124F1007FF313 = {
 			isa = PBXGroup;
 			children = (
@@ -73,17 +88,19 @@
 				6226C850293124F1007FF313 /* AppDelegate.swift */,
 				624856F9293E552A00BCDA98 /* Delifood.xcdatamodeld */,
 				6226C852293124F1007FF313 /* SceneDelegate.swift */,
-				6226C854293124F1007FF313 /* HomeViewController.swift */,
+				6215584D2943C5A3005C562F /* Home */,
 				622DFE672936D44E00F23211 /* DescriptionProductViewController.swift */,
+				62D5C36029383A14007A5653 /* CardViewController.swift */,
 				622DFE652936BBB300F23211 /* CeldaTableViewCell.swift */,
 				6226C856293124F1007FF313 /* Main.storyboard */,
 				6226C859293124F7007FF313 /* Assets.xcassets */,
 				6226C85B293124F7007FF313 /* LaunchScreen.storyboard */,
 				6226C85E293124F7007FF313 /* Info.plist */,
-				62D5C36029383A14007A5653 /* CardViewController.swift */,
-				624856FE293E82A400BCDA98 /* ProducTableViewCell.swift */,
 				624856FC293E6C2100BCDA98 /* ProductCar.swift */,
-				62C8B823293DAB1D00C18E41 /* Productos.swift */,
+				62C8B823293DAB1D00C18E41 /* Producto.swift */,
+				6215584B2943B1DA005C562F /* Productos.swift */,
+				6268CBB02942925C0035F741 /* test.json */,
+				6268CBB2294295B90035F741 /* Service.swift */,
 			);
 			path = DeliFood;
 			sourceTree = "<group>";
@@ -147,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6226C85D293124F7007FF313 /* LaunchScreen.storyboard in Resources */,
+				6268CBB12942925C0035F741 /* test.json in Resources */,
 				6226C85A293124F7007FF313 /* Assets.xcassets in Resources */,
 				6226C858293124F2007FF313 /* Main.storyboard in Resources */,
 			);
@@ -164,9 +182,11 @@
 				624856FF293E82A400BCDA98 /* ProducTableViewCell.swift in Sources */,
 				624856FD293E6C2100BCDA98 /* ProductCar.swift in Sources */,
 				62D5C36129383A14007A5653 /* CardViewController.swift in Sources */,
+				6215584C2943B1DA005C562F /* Productos.swift in Sources */,
 				624856FB293E552A00BCDA98 /* Delifood.xcdatamodeld in Sources */,
-				62C8B824293DAB1D00C18E41 /* Productos.swift in Sources */,
+				62C8B824293DAB1D00C18E41 /* Producto.swift in Sources */,
 				6226C853293124F1007FF313 /* SceneDelegate.swift in Sources */,
+				6268CBB3294295B90035F741 /* Service.swift in Sources */,
 				622DFE662936BBB300F23211 /* CeldaTableViewCell.swift in Sources */,
 				622DFE682936D44E00F23211 /* DescriptionProductViewController.swift in Sources */,
 			);

@@ -8,21 +8,32 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let products: [Productos] = [
-        Productos(idProduct: 1, nameProduct: "Pastel de manzana", stock: 12, categoryProduct: "Postre", descripcion: "Pastel de manzana chilenas cubierta con chantilli y crema con decoracion de caracol y bastones de chocolate",imagenProduct: "https://www.hogarmania.com/archivos/201402/5317-2-tarta-de-manzana-702-xl-668x400x80xX.jpg",priceProduct: 230),
-        Productos(idProduct: 2, nameProduct: "Chicha morada", stock: 12, categoryProduct: "Bebidas", descripcion: "Pastel de manzana chilenas cubierta con chantilli y crema con decoracion de caracol y bastones de chocolate", imagenProduct: "https://www.peru.travel/Contenido/General/Imagen/pe/650/1.1/chicha-morada-limon.jpg",priceProduct: 120)
-    ]
-    var filterProducts:[Productos] = []
+    var products: [Producto] = []
+    var filterProducts:[Producto] = []
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filterProducts = products
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.
+        readJSONFromFile(fileName: "test")
+    }
+    
+    func readJSONFromFile (fileName: String) {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(Productos.self, from: data)
+                products = jsonData.product
+                filterProducts = products
+                tableView.reloadData()
+            } catch {
+                print("error:\(error)")
+            }
+        }
     }
 
     @IBAction func viewCardBtn(_ sender: Any) {
@@ -71,8 +82,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, UISear
         secondViewController.producto = product
         secondViewController.modalPresentationStyle = .fullScreen   // no se puede regresar usar navigate
         present(secondViewController, animated: true)
-        //show(secondViewController, sender: Any)
-        
     }
 }
 

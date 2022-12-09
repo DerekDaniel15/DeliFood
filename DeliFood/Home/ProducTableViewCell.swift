@@ -18,7 +18,6 @@ class ProducTableViewCell: UITableViewCell {
     }
     
     func addDataCell(_ product:ProductCar) {
-            print("celda--> ")
             imageProduc.loadFrom(URLAddress: String(product.imagenProduct))
             price.text = String(product.priceProduct)
             nameProduc.text = product.nameProduct
@@ -26,7 +25,6 @@ class ProducTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

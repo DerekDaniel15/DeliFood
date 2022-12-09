@@ -10,7 +10,7 @@ import CoreData
 
 
 class DescriptionProductViewController: UIViewController {
-    var producto: Productos!
+    var producto: Producto!
 
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
