@@ -29,20 +29,20 @@
         },
         {
               "idProduct": 4,
-              "nameProduct": "Pastel ",
+              "nameProduct": "Lomo Saltado",
               "stock": 2,
-              "categoryProduct":"Postre",
+              "categoryProduct":"Platos",
               "descripcion":"sdasdasdasdasdadsasd",
-              "imagenProduct":"sjdhaksdjhakshdkajhs",
+              "imagenProduct":"https://jameaperu.com/wp-content/uploads/2020/03/lomo-saltado-de-pollo_700x465.jpg",
               "priceProduct": 120
         },
         {
               "idProduct": 5,
-              "nameProduct": "Pastel ",
+              "nameProduct": "Hamburguesa",
               "stock": 2,
-              "categoryProduct":"Postre",
+              "categoryProduct":"Chatarra",
               "descripcion":"sdasdasdasdasdadsasd",
-              "imagenProduct":"sjdhaksdjhakshdkajhs",
+              "imagenProduct":"https://www.pequerecetas.com/wp-content/uploads/2013/07/hamburguesas-caseras-receta.jpg",
               "priceProduct": 120
         }
     ]
