@@ -9,14 +9,24 @@ import Foundation
 import UIKit
 
 protocol CarRouterProtocol {
-    
+    func viewPago()
 }
 
-class CarRouter: CarRouterProtocol {
+class CarRouter {
     var presenter: CarPresenterProtocol?
     var view: UIViewController?
     
     required init(presenter: CarPresenterProtocol) {
         self.presenter = presenter
     }
+}
+
+extension CarRouter: CarRouterProtocol {
+    func viewPago() {
+        let viewPago = PagosConfigure.makeViewPagos()
+        viewPago.modalPresentationStyle = .fullScreen
+        view?.present(viewPago, animated: true)
+    }
+    
+    
 }

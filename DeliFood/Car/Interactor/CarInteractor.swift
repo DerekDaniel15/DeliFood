@@ -11,6 +11,7 @@ import Foundation
 protocol CarInteractorProtocol {
     func getProductsCar() -> [ProductCar]
     func deleteProductCar(_ id:Int)
+    func comprar()
 }
 
 class CarInteractor {
@@ -19,6 +20,10 @@ class CarInteractor {
 }
 
 extension CarInteractor: CarInteractorProtocol {
+    func comprar() {
+        api?.deleteAllProduct()
+    }
+    
     func deleteProductCar(_ id:Int) {
         api?.deleteProduct(id)
     }

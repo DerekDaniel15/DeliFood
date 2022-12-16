@@ -15,21 +15,36 @@ protocol DataCacheCore {
     func updateProductCar(_ producto: ProductDetailProtocol, _ Count:Int)
     func setProductCar(_ producto: ProductDetailProtocol, _ Count:Int)
     func deleteProduct(_ id:Int)
+    func deleteAllProduct()
 }
 
 class CoreDataService: DataCacheCore {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductsCar")
+    let requestProductCar = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductsCar")
+    let requestCodigoPago = NSFetchRequest<NSFetchRequestResult>(entityName: "CodigoPago")
+    
+    func deleteAllProduct() {
+        let context = appDelegate.persistentContainer.viewContext
+        requestProductCar.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(requestProductCar);
+            for data in result as! [NSManagedObject] {
+                context.delete(data)
+            }
+        } catch {
+            print("Failed")
+        }
+    }
     
     func deleteProduct(_ id: Int) {
         let context = appDelegate.persistentContainer.viewContext
-        request.returnsObjectsAsFaults = false
+        requestProductCar.returnsObjectsAsFaults = false
         let predicate = NSPredicate(format: "(id_product = %@)", String(id) )
-        request.predicate = predicate
+        requestProductCar.predicate = predicate
         do {
-            let result = try context.fetch(request);
+            let result = try context.fetch(requestProductCar);
             let data = result[0] as! NSManagedObject
             context.delete(data)
         } catch {
@@ -40,10 +55,10 @@ class CoreDataService: DataCacheCore {
     func updateProductCar(_ producto: ProductDetailProtocol, _ Count:Int) {
         let context = appDelegate.persistentContainer.viewContext
         let predicate = NSPredicate(format: "(id_product = %@)", String(producto.idProduct) )
-        request.returnsObjectsAsFaults = false
-        request.predicate = predicate
+        requestProductCar.returnsObjectsAsFaults = false
+        requestProductCar.predicate = predicate
         do {
-            let results = try context.fetch(request);
+            let results = try context.fetch(requestProductCar);
             if results.count != 0 {
                 let objectUpdate = results[0] as! NSManagedObject
                 let count = objectUpdate.value(forKey: "count") as! Int
@@ -86,9 +101,9 @@ class CoreDataService: DataCacheCore {
     func getproductsCar() -> [ProductCar] {
         var products: [ProductCar] = []
         let context = appDelegate.persistentContainer.viewContext
-        request.returnsObjectsAsFaults = false
+        requestProductCar.returnsObjectsAsFaults = false
         do {
-            let result = try context.fetch(request);
+            let result = try context.fetch(requestProductCar);
             print(result as! [NSManagedObject] )
             for data in result as! [NSManagedObject] {
                 let name = data.value(forKey: "name_product") as! String

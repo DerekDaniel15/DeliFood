@@ -36,16 +36,7 @@ class CardViewController: UIViewController {
     
     @IBAction func Comprar(_ sender: Any) {
         // DElete data coredata
-        let context = appDelegate.persistentContainer.viewContext
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request);
-            for data in result as! [NSManagedObject] {
-                context.delete(data)
-            }
-        } catch {
-            print("Failed")
-        }
+        presenter?.Comprar()
     }
 }
 

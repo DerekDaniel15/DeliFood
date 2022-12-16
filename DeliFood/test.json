@@ -44,6 +44,51 @@
               "descripcion":"sdasdasdasdasdadsasd",
               "imagenProduct":"https://www.pequerecetas.com/wp-content/uploads/2013/07/hamburguesas-caseras-receta.jpg",
               "priceProduct": 120
+        },
+        {
+              "idProduct": 6,
+              "nameProduct": "Aji de gallina",
+              "stock": 2,
+              "categoryProduct":"Platos",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"https://elcomercio.pe/resizer/xtyo03QBU_jg3PqNuPzvPCnqd60=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZPWWXZ5EUBHTJGV4IPXNHL7WJE.jpg",
+              "priceProduct": 20
+        },
+        {
+              "idProduct": 7,
+              "nameProduct": "Estofado",
+              "stock": 2,
+              "categoryProduct":"Platos",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"https://www.recetasnestle.com.pe/sites/default/files/srh_recipes/02d772e59776b9b3566382bbf306f795.jpg",
+              "priceProduct": 18
+        },
+        {
+              "idProduct": 8,
+              "nameProduct": "Ceviche",
+              "stock": 5,
+              "categoryProduct":"Mariscos",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"https://t1.rg.ltmcdn.com/es/posts/7/4/1/ceviche_peruano_18147_orig.jpg",
+              "priceProduct": 13
+        },
+        {
+              "idProduct": 9,
+              "nameProduct": "Leche de tigre",
+              "stock": 2,
+              "categoryProduct":"Mariscos",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"https://picanterias.com/wp-content/uploads/2020/05/receta-leche-de-tigre.jpg",
+              "priceProduct": 13
+        },
+        {
+              "idProduct": 10,
+              "nameProduct": "Caldo de gallina",
+              "stock": 2,
+              "categoryProduct":"Sopas",
+              "descripcion":"sdasdasdasdasdadsasd",
+              "imagenProduct":"https://comidasperuanas.net/wp-content/uploads/2015/11/Caldo-de-gallina.jpg",
+              "priceProduct": 15
         }
     ]
 }

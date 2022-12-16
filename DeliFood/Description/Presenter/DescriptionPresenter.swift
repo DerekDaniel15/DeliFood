@@ -35,6 +35,4 @@ extension DescriptionPresenter: DescriptionPresenterProtocol {
     func addToCar(_ Count:Int) {
         interactor?.setProductDatacore(producto, Count)
     }
-    
-    
 }

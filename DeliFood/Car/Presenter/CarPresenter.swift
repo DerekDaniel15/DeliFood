@@ -15,6 +15,8 @@ protocol CarPresenterProtocol {
     func getPriceTotal() -> String
     
     func deleteProductCar(_ id: Int)
+    
+    func Comprar()
 }
 
 class CarPresenter {
@@ -28,6 +30,11 @@ class CarPresenter {
 }
 
 extension CarPresenter: CarPresenterProtocol {
+    func Comprar() {
+        //interactor?.comprar()
+        router?.viewPago()
+    }
+    
     func deleteProductCar(_ id: Int) {
         print("--------------->delete"+String(id))
         interactor?.deleteProductCar(id)

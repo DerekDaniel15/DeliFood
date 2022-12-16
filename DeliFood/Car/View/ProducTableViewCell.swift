@@ -16,6 +16,8 @@ class ProducTableViewCell: UITableViewCell {
     @IBOutlet weak var imageProduc: UIImageView!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var count: UILabel!
+    @IBOutlet weak var unitPrice: UILabel!
+    
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductsCar")
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var idPedido: Int!
@@ -30,9 +32,11 @@ class ProducTableViewCell: UITableViewCell {
     
     func addDataCell(_ product:ProductCar) {
         idPedido = product.idProduct
-            imageProduc.loadFrom(URLAddress: String(product.imagenProduct))
-            price.text = String(product.priceProduct)
-            nameProduc.text = product.nameProduct
+        imageProduc.loadFrom(URLAddress: String(product.imagenProduct))
+        price.text = String(product.priceProduct)
+        let unPrice = product.priceProduct / product.count
+        unitPrice.text = "Precio x unid. S/." + String(unPrice)
+        nameProduc.text = product.nameProduct
         count.text = "x" + String(product.count)
     }
 

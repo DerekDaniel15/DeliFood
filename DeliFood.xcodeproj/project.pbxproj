@@ -20,6 +20,11 @@
 		6226C85D293124F7007FF313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6226C85B293124F7007FF313 /* LaunchScreen.storyboard */; };
 		622DFE662936BBB300F23211 /* CeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622DFE652936BBB300F23211 /* CeldaCollectionViewCell.swift */; };
 		622DFE682936D44E00F23211 /* DescriptionProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622DFE672936D44E00F23211 /* DescriptionProductViewController.swift */; };
+		62407175294CF6810069120D /* PagosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62407174294CF6810069120D /* PagosViewController.swift */; };
+		62407177294CF6900069120D /* PagosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62407176294CF6900069120D /* PagosRouter.swift */; };
+		62407179294CF7810069120D /* PagosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62407178294CF7810069120D /* PagosPresenter.swift */; };
+		6240717B294CF7930069120D /* PagosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6240717A294CF7930069120D /* PagosInteractor.swift */; };
+		6240717D294CF7C60069120D /* PagosConfigurate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6240717C294CF7C60069120D /* PagosConfigurate.swift */; };
 		62481714294A41FF0091289D /* CarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62481713294A41FF0091289D /* CarConfig.swift */; };
 		62481716294A44610091289D /* CarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62481715294A44610091289D /* CarPresenter.swift */; };
 		62481718294A446E0091289D /* CarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62481717294A446E0091289D /* CarRouter.swift */; };
@@ -59,6 +64,11 @@
 		6226C85E293124F7007FF313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		622DFE652936BBB300F23211 /* CeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCollectionViewCell.swift; sourceTree = "<group>"; };
 		622DFE672936D44E00F23211 /* DescriptionProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionProductViewController.swift; sourceTree = "<group>"; };
+		62407174294CF6810069120D /* PagosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosViewController.swift; sourceTree = "<group>"; };
+		62407176294CF6900069120D /* PagosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosRouter.swift; sourceTree = "<group>"; };
+		62407178294CF7810069120D /* PagosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosPresenter.swift; sourceTree = "<group>"; };
+		6240717A294CF7930069120D /* PagosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosInteractor.swift; sourceTree = "<group>"; };
+		6240717C294CF7C60069120D /* PagosConfigurate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosConfigurate.swift; sourceTree = "<group>"; };
 		62481713294A41FF0091289D /* CarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarConfig.swift; sourceTree = "<group>"; };
 		62481715294A44610091289D /* CarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPresenter.swift; sourceTree = "<group>"; };
 		62481717294A446E0091289D /* CarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRouter.swift; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 				624856F9293E552A00BCDA98 /* Delifood.xcdatamodeld */,
 				626BCD522947C684008B5729 /* Splash.swift */,
 				626BCD542947CD5D008B5729 /* Services */,
+				6240716E294CF3190069120D /* Pagos */,
 				6215584D2943C5A3005C562F /* Home */,
 				6246123C2946D71000A2BE6C /* Description */,
 				6246123B2946D6EA00A2BE6C /* Car */,
@@ -173,6 +184,58 @@
 				6268CBB02942925C0035F741 /* test.json */,
 			);
 			path = DeliFood;
+			sourceTree = "<group>";
+		};
+		6240716E294CF3190069120D /* Pagos */ = {
+			isa = PBXGroup;
+			children = (
+				62407173294CF5AE0069120D /* View */,
+				62407172294CF56F0069120D /* Entity */,
+				62407171294CF4A40069120D /* Router */,
+				62407170294CF4910069120D /* Presenter */,
+				6240716F294CF47C0069120D /* Interactor */,
+				6240717C294CF7C60069120D /* PagosConfigurate.swift */,
+			);
+			path = Pagos;
+			sourceTree = "<group>";
+		};
+		6240716F294CF47C0069120D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6240717A294CF7930069120D /* PagosInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		62407170294CF4910069120D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				62407178294CF7810069120D /* PagosPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		62407171294CF4A40069120D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				62407176294CF6900069120D /* PagosRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		62407172294CF56F0069120D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		62407173294CF5AE0069120D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62407174294CF6810069120D /* PagosViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		624612382946C97400A2BE6C /* Interactor */ = {
@@ -375,7 +438,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62407177294CF6900069120D /* PagosRouter.swift in Sources */,
 				626BCD5129479EF1008B5729 /* HomeConfigurate.swift in Sources */,
+				6240717D294CF7C60069120D /* PagosConfigurate.swift in Sources */,
 				62481716294A44610091289D /* CarPresenter.swift in Sources */,
 				6204FBA12948F5DC00FC2199 /* DescriptionPresenter.swift in Sources */,
 				6226C855293124F1007FF313 /* HomeViewController.swift in Sources */,
@@ -384,9 +449,12 @@
 				626BCD562947CD90008B5729 /* NetworkService.swift in Sources */,
 				626BCD4F29479E9E008B5729 /* HomeInteractor.swift in Sources */,
 				624856FF293E82A400BCDA98 /* ProducTableViewCell.swift in Sources */,
+				62407175294CF6810069120D /* PagosViewController.swift in Sources */,
+				6240717B294CF7930069120D /* PagosInteractor.swift in Sources */,
 				624856FD293E6C2100BCDA98 /* ProductCar.swift in Sources */,
 				62D5C36129383A14007A5653 /* CardViewController.swift in Sources */,
 				6215584C2943B1DA005C562F /* Productos.swift in Sources */,
+				62407179294CF7810069120D /* PagosPresenter.swift in Sources */,
 				626BCD4D29479E8A008B5729 /* HomePresenter.swift in Sources */,
 				6204FB9F2948F5BF00FC2199 /* DescriptionInteractor.swift in Sources */,
 				624856FB293E552A00BCDA98 /* Delifood.xcdatamodeld in Sources */,

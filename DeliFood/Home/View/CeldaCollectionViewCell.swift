@@ -28,3 +28,18 @@ class CeldaCollectionViewCell: UICollectionViewCell {
         print("select")
     }
 }
+
+extension UIImageView {
+    func loadFrom(URLAddress: String) {
+        if let url = URL(string: URLAddress) {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+              // Error handling...
+              guard let imageData = data else { return }
+
+              DispatchQueue.main.async {
+                self.image = UIImage(data: imageData)
+              }
+            }.resume()
+          }
+    }
+}
