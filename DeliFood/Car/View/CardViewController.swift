@@ -16,7 +16,6 @@ protocol CardViewControllerProtocol {
 class CardViewController: UIViewController {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //var productsCar:[ProductCar] = []
     
     var presenter: CarPresenterProtocol?
     

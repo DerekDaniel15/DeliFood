@@ -31,10 +31,14 @@ class CarPresenter {
 
 extension CarPresenter: CarPresenterProtocol {
     func Comprar() {
-        interactor?.comprar()
-        products = []
-        view?.reloadTable()
-        router?.viewPago()
+        if products.count != 0 {
+            interactor?.comprar()
+            products = []
+            view?.reloadTable()
+            router?.viewPago()
+        }else {
+            return
+        }
     }
     
     func deleteProductCar(_ id: Int) {

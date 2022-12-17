@@ -5,7 +5,7 @@
               "nameProduct": "Pastel",
               "stock": 2,
               "categoryProduct":"Postre",
-              "descripcion":"Patel cubierto con chantilli",
+              "descripcion":"Un pastel es, según la definición del Diccionario de la lengua española de la Real Academia Española, una «masa de harina y manteca, cocida al horno, en que ordinariamente se envuelve crema o dulce, y a veces carne, fruta o pescado",
               "imagenProduct":"https://t2.rg.ltmcdn.com/es/posts/2/4/9/pastel_de_fresa_23942_orig.jpg",
               "priceProduct": 50
         },
@@ -14,7 +14,7 @@
               "nameProduct": "Chicha Morada",
               "stock": 15,
               "categoryProduct":"Bebida",
-              "descripcion":"Chicha morada cosechada en Ica, el maiz morado mejor cuidado.",
+              "descripcion":"Chicha morada cosechada en Ica, el maiz morado mejor cuidado.La chicha morada es una bebida originaria de la región andina del Perú, pero cuyo consumo actualmente se encuentra extendido a nivel internacional.​El insumo principal de la bebida es el maíz culli o ckolli, que es una variedad peruana de maíz morado que se cultiva ampliamente en la cordillera de los Andes",
               "imagenProduct":"https://www.peru.travel/Contenido/General/Imagen/pe/650/1.1/chicha-morada-limon.jpg",
               "priceProduct": 10
         },
@@ -32,8 +32,8 @@
               "nameProduct": "Lomo Saltado",
               "stock": 2,
               "categoryProduct":"Platos",
-              "descripcion":"sdasdasdasdasdadsasd",
-              "imagenProduct":"https://jameaperu.com/wp-content/uploads/2020/03/lomo-saltado-de-pollo_700x465.jpg",
+              "descripcion":"El lomo saltado es un plato típico de la gastronomía del Perú consistente en carne de res, arroz cocido y papas fritas. Es uno de los platos más consumidos popularmente en el Perú.​",
+              "imagenProduct":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lomo-saltado-perudelights.jpg/640px-Lomo-saltado-perudelights.jpg",
               "priceProduct": 120
         },
         {
@@ -41,7 +41,7 @@
               "nameProduct": "Hamburguesa",
               "stock": 2,
               "categoryProduct":"Chatarra",
-              "descripcion":"sdasdasdasdasdadsasd",
+              "descripcion":"Una hamburguesa es un sándwich hecho a base de carne molida o de origen vegetal, ​ aglutinada en forma de filete cocinado a la parrilla o a la plancha, aunque también puede freírse u hornearse.",
               "imagenProduct":"https://www.pequerecetas.com/wp-content/uploads/2013/07/hamburguesas-caseras-receta.jpg",
               "priceProduct": 120
         },
@@ -50,7 +50,7 @@
               "nameProduct": "Aji de gallina",
               "stock": 2,
               "categoryProduct":"Platos",
-              "descripcion":"sdasdasdasdasdadsasd",
+              "descripcion":"El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada.",
               "imagenProduct":"https://elcomercio.pe/resizer/xtyo03QBU_jg3PqNuPzvPCnqd60=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZPWWXZ5EUBHTJGV4IPXNHL7WJE.jpg",
               "priceProduct": 20
         },
@@ -59,7 +59,7 @@
               "nameProduct": "Estofado",
               "stock": 2,
               "categoryProduct":"Platos",
-              "descripcion":"sdasdasdasdasdadsasd",
+              "descripcion":"Un estofado es un proceso culinario de cocción de un alimento, el cual es sometido a fuego lento en un recipiente cerrado.​ El guiso realizado mediante esta técnica culinaria evita la evaporación manteniendo gran parte de los jugos iniciales y reteniendo de esta forma los sabores y aromas de los alimentos cocinados.​ ",
               "imagenProduct":"https://www.recetasnestle.com.pe/sites/default/files/srh_recipes/02d772e59776b9b3566382bbf306f795.jpg",
               "priceProduct": 18
         },
@@ -68,7 +68,7 @@
               "nameProduct": "Ceviche",
               "stock": 5,
               "categoryProduct":"Mariscos",
-              "descripcion":"sdasdasdasdasdadsasd",
+              "descripcion":"El cebiche, ceviche, sebiche o seviche ​ es un plato consistente en carne marinada ―pescado, mariscos o ambos― en aliños cítricos",
               "imagenProduct":"https://t1.rg.ltmcdn.com/es/posts/7/4/1/ceviche_peruano_18147_orig.jpg",
               "priceProduct": 13
         },
@@ -77,7 +77,7 @@
               "nameProduct": "Leche de tigre",
               "stock": 2,
               "categoryProduct":"Mariscos",
-              "descripcion":"sdasdasdasdasdadsasd",
+              "descripcion":"Es el líquido lechoso que queda después de marinar el pescado crudo: una seductora mezcla de ingredientes como cítricos, ajíes y cebollas que se transforman con el toque del mar",
               "imagenProduct":"https://picanterias.com/wp-content/uploads/2020/05/receta-leche-de-tigre.jpg",
               "priceProduct": 13
         },
@@ -86,7 +86,7 @@
               "nameProduct": "Caldo de gallina",
               "stock": 2,
               "categoryProduct":"Sopas",
-              "descripcion":"sdasdasdasdasdadsasd",
+              "descripcion":"El caldo de gallina tiene un significado más familiar y de alegría. Este plato está muy presente en las celebraciones o festividades, con sus diferentes adaptaciones, recetas tradicionales y fusiones propias de cada familia o comunidad.",
               "imagenProduct":"https://comidasperuanas.net/wp-content/uploads/2015/11/Caldo-de-gallina.jpg",
               "priceProduct": 15
         }
