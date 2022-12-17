@@ -6,7 +6,7 @@
 
 import UIKit
 
-protocol HomeViewControllerProtocol {
+protocol HomeViewControllerProtocol: AnyObject {
     
 }
 
@@ -16,7 +16,7 @@ class HomeViewController: UIViewController,  HomeViewControllerProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionProduct: UICollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionProduct.dataSource = self

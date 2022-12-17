@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DescriptionInteractorProtocol {
+protocol DescriptionInteractorProtocol:AnyObject {
     func setProductDatacore(_ producto: ProductDetailProtocol, _ Count:Int)
 }
 

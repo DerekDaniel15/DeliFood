@@ -7,19 +7,20 @@
 
 import Foundation
 
-protocol HomeInteractorProtocol {
+protocol HomeInteractorProtocol: AnyObject {
     func GetdataByJson() -> [Producto]
 }
 
 class HomeInteractor {
     var presenter: HomePresenterProtocol?
     var api: DataRemote?
+    var coredata: DataCacheCore?
 }
 
 extension HomeInteractor: HomeInteractorProtocol {
+    
     func GetdataByJson() -> [Producto] {
         return api?.getproducts() ?? []
     }
-    
     
 }

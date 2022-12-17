@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-protocol DescriptionPresenterProtocol {
+protocol DescriptionPresenterProtocol: AnyObject {
     func addToCar(_ Count:Int)
     func getDataProduct() -> ProductDetailProtocol
     func viewCar()
@@ -20,6 +20,7 @@ class DescriptionPresenter {
     var router: DescriptionRouterProtocol?
     var interactor: DescriptionInteractorProtocol?
     var producto: ProductDetailProtocol!
+    
 }
 
 extension DescriptionPresenter: DescriptionPresenterProtocol {

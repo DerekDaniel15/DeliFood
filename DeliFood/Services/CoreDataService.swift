@@ -10,12 +10,16 @@ import CoreData
 import UIKit
 
 
-protocol DataCacheCore {
+protocol DataCacheCore: AnyObject {
     func getproductsCar() -> [ProductCar]
     func updateProductCar(_ producto: ProductDetailProtocol, _ Count:Int)
     func setProductCar(_ producto: ProductDetailProtocol, _ Count:Int)
     func deleteProduct(_ id:Int)
     func deleteAllProduct()
+    
+    func setCode(_ codigo:Int)
+    func getCode() -> Int
+    func deleteCode()
 }
 
 class CoreDataService: DataCacheCore {
@@ -24,6 +28,49 @@ class CoreDataService: DataCacheCore {
     
     let requestProductCar = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductsCar")
     let requestCodigoPago = NSFetchRequest<NSFetchRequestResult>(entityName: "CodigoPago")
+    
+    func setCode(_ codigo:Int) {
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "CodigoPago", in: context)
+        let newProductCar = NSManagedObject(entity: entity!, insertInto: context)
+        newProductCar.setValue(codigo, forKey: "codigo")
+        do {
+            try context.save()
+        } catch {
+            print("Error saving")
+        }
+    }
+    
+    func getCode() -> Int {
+        let context = appDelegate.persistentContainer.viewContext
+        requestCodigoPago.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(requestCodigoPago);
+            let data = result as! [NSManagedObject]
+            if data.count != 0 {
+                let code = data[0].value(forKey: "codigo") as! Int
+                return code
+            }
+        } catch {
+            print("Failed")
+        }
+        return 0
+    }
+    
+    func deleteCode() {
+        let context = appDelegate.persistentContainer.viewContext
+        requestCodigoPago.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(requestCodigoPago);
+            for data in result as! [NSManagedObject] {
+                context.delete(data)
+            }
+        } catch {
+            print("Failed")
+        }
+    }
+    
+    
     
     func deleteAllProduct() {
         let context = appDelegate.persistentContainer.viewContext
@@ -67,7 +114,6 @@ class CoreDataService: DataCacheCore {
                 objectUpdate.setValue(countTotal * producto.priceProduct, forKey: "price")
                 do {
                     try context.save()
-                    print("update")
                 } catch let error as NSError {
                     print(error)
                 }
@@ -104,7 +150,6 @@ class CoreDataService: DataCacheCore {
         requestProductCar.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(requestProductCar);
-            print(result as! [NSManagedObject] )
             for data in result as! [NSManagedObject] {
                 let name = data.value(forKey: "name_product") as! String
                 let count = data.value(forKey: "count") as! Int

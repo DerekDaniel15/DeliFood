@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol HomePresenterProtocol {
+protocol HomePresenterProtocol: AnyObject {
     func getData()
     func SearchProduct(_ text: String)
     func printProductData(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UICollectionViewCell
@@ -25,9 +25,12 @@ class HomePresenter {
     
     var products:[Producto] = []
     var filterProduct:[Producto] = []
+    var codigo: [Int] = []
+    
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    
     func viewCar() {
         router?.presentCarView()
     }

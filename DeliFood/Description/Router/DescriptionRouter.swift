@@ -13,8 +13,8 @@ protocol DescriptionRouterProtocol {
 }
 
 class DescriptionRouter {
-    var presenter : DescriptionPresenterProtocol?
-    var view: UIViewController?
+    unowned var presenter : DescriptionPresenterProtocol?
+    weak var view: UIViewController?
     
     required init(presenter: DescriptionPresenterProtocol) {
         self.presenter = presenter

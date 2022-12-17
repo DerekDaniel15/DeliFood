@@ -31,12 +31,13 @@ class CarPresenter {
 
 extension CarPresenter: CarPresenterProtocol {
     func Comprar() {
-        //interactor?.comprar()
+        interactor?.comprar()
+        products = []
+        view?.reloadTable()
         router?.viewPago()
     }
     
     func deleteProductCar(_ id: Int) {
-        print("--------------->delete"+String(id))
         interactor?.deleteProductCar(id)
         products = products.filter{ p in
             p.idProduct != id

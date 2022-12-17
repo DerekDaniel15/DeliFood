@@ -13,6 +13,7 @@ class PagosConfigure {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let coredata = CoreDataService()
+        let api = MocksService()
         let presenter = PagosPresenter()
         let interactor = PagosInteractor()
         let view = storyboard.instantiateViewController(withIdentifier: "PagosViewController") as! PagosViewController
@@ -20,6 +21,7 @@ class PagosConfigure {
         router.view = view
         
         interactor.coredata = coredata
+        interactor.api = api
         
         presenter.router = router
         presenter.interactor = interactor

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ProductDetailProtocol {
+public protocol ProductDetailProtocol: AnyObject {
     var idProduct: Int { get }
     var nameProduct: String { get }
     var stock: Int { get }

@@ -7,17 +7,28 @@
 
 import Foundation
 
-protocol DataRemote {
+protocol DataRemote: AnyObject {
     func getproducts() -> [Producto]
+    func getCodigo() -> Int
 }
 
 class NetworkService: DataRemote {
+    func getCodigo() -> Int {
+        return 0
+    }
+    
     func getproducts() -> [Producto] {
         return []
     }
 }
 
 class MocksService: DataRemote {
+    func getCodigo() -> Int {
+        let randomInt = Int.random(in: 99999..<1000000)
+        print(randomInt)
+        return randomInt
+    }
+    
     func getproducts() -> [Producto] {
         if let url = Bundle.main.url(forResource: "test", withExtension: "json") {
             do {
