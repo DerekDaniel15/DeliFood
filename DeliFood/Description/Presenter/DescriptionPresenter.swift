@@ -13,6 +13,7 @@ protocol DescriptionPresenterProtocol: AnyObject {
     func addToCar(_ Count:Int)
     func getDataProduct() -> ProductDetailProtocol
     func viewCar()
+    func getTotalPrice(_ count:Int) -> String
 }
 
 class DescriptionPresenter {
@@ -24,6 +25,11 @@ class DescriptionPresenter {
 }
 
 extension DescriptionPresenter: DescriptionPresenterProtocol {
+    func getTotalPrice(_ count:Int) -> String {
+        let price = producto.priceProduct
+        return String( price * count)
+    }
+    
     func viewCar() {
         router?.viewCar()
     }

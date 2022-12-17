@@ -8,10 +8,6 @@
 import UIKit
 import CoreData
 
-protocol DescriptionProductViewControllerProtocol {
-    
-}
-
 class DescriptionProductViewController: UIViewController {
     var presenter: DescriptionPresenterProtocol?
 
@@ -21,6 +17,7 @@ class DescriptionProductViewController: UIViewController {
     @IBOutlet weak var counter: UIStepper!
     @IBOutlet weak var productDescription: UITextView!
     @IBOutlet weak var Cantidad: UILabel!
+    @IBOutlet weak var priceTotalProduct: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -31,10 +28,12 @@ class DescriptionProductViewController: UIViewController {
         productImage.loadFrom(URLAddress: String(presenter?.getDataProduct().imagenProduct ?? ""))
         productDescription.text = presenter?.getDataProduct().descripcion
         priceProduct.text = String(presenter?.getDataProduct().priceProduct ?? 0)
+        priceTotalProduct.text = String( presenter?.getDataProduct().priceProduct ?? 0 * Int(counter.value))
     }
     
     @IBAction func ClickCount(_ sender: Any) {
         Cantidad.text = "\(Int(counter.value))"
+        priceTotalProduct.text = presenter?.getTotalPrice(Int(counter.value))
     }
     
     @IBAction func CardViewBtn(_ sender: Any) {

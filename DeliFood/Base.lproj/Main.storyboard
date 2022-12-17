@@ -319,7 +319,7 @@
                                     <action selector="backBtn:" destination="99q-OB-0Qz" eventType="touchUpInside" id="ixx-W8-gmo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-oP-sEP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-oP-sEP">
                                 <rect key="frame" x="100" y="788" width="49" height="21.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -567,6 +567,7 @@
                         <outlet property="Cantidad" destination="Mph-GU-Sfs" id="TZn-ad-i5Z"/>
                         <outlet property="counter" destination="1H0-fd-RUd" id="9Es-qL-1NC"/>
                         <outlet property="priceProduct" destination="Iui-xf-eWo" id="Iql-fn-bej"/>
+                        <outlet property="priceTotalProduct" destination="1qp-ng-lei" id="6h9-Hr-0Qp"/>
                         <outlet property="productDescription" destination="Nbu-Qq-yGq" id="ydC-36-0gD"/>
                         <outlet property="productImage" destination="aCL-Ef-Zt9" id="Hmk-oe-yiy"/>
                         <outlet property="productName" destination="2SY-c0-SYm" id="4F3-SQ-qKd"/>
